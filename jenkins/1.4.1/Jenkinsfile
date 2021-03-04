@@ -1,0 +1,13 @@
+library identifier: 'sample-jenkins-lib@master', 
+        retriever: modernSCM([$class: 'GitSCMSource', credentialsId: '', remote: 'https://github.com/saurabhd2106/jenkins-shared-library.git'])
+
+pipeline {
+    agent any 
+    stages {
+        stage('Audit Tools') {
+            steps {
+                auditTools()
+            }
+        }
+    }
+}
