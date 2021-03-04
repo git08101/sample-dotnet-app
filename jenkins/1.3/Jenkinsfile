@@ -64,7 +64,7 @@ String getVersionSuffix() {
 }
 
 void auditTools() {
-    sh '''
+    powershell '''
         git version
         dotnet --list-sdks
         dotnet --list-runtimes
