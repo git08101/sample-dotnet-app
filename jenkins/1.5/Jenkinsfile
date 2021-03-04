@@ -1,0 +1,59 @@
+library identifier: 'sample-dotnet-app@master', 
+        retriever: modernSCM([$class: 'GitSCMSource', credentialsId: '', remote: 'https://github.com/saurabhd2106/shared-library.git'])
+        
+pipeline {
+    agent any
+
+    parameters {
+        booleanParam(name: 'RC', defaultValue: false, description: 'Is this a Release Candidate?')
+    }
+
+    environment {
+        VERSION = "0.1.0"        
+        VERSION_RC = "rc.2"
+    }
+    stages {
+        stage('Audit tools') {                        
+            steps {
+                auditTools()
+            }
+        }
+        stage('Build') {
+
+             environment {
+              VERSION_SUFFIX = getVersionSuffix rcNumber: env.VERSION_RC, isReleaseCandidate: params.RC
+            }
+
+            steps {
+              echo "Building version: ${VERSION} with suffix: ${VERSION_SUFFIX}"
+              powershell 'dotnet build -p:VersionPrefix="${VERSION}" --version-suffix "${VERSION_SUFFIX}" ./Pi.Web/Pi.Web.csproj'
+            }
+        }
+        stage('Unit Test') {
+            steps {
+              
+                powershell '''
+                    dotnet test --logger "trx;LogFileName=Pi.Math.trx" Pi.Math.Tests/Pi.Math.Tests.csproj
+                    dotnet test --logger "trx;LogFileName=Pi.Runtime.trx" Pi.Runtime.Tests/Pi.Runtime.Tests.csproj
+                '''
+                mstest testResultsFile:"**/*.trx", keepLongStdio: true
+              
+            }
+        }
+        stage('Smoke Test') {
+            steps {
+              powershell 'dotnet ./Pi.Web/bin/Debug/netcoreapp3.1/Pi.Web.dll'
+            }
+        }
+
+        stage('Publish') {
+            when {
+                expression { return params.RC }
+            } 
+            steps {
+                powershell 'dotnet publish -p:VersionPrefix="${VERSION}" --version-suffix "${VERSION_RC}" Pi.Web/Pi.Web.csproj -o ./out'
+                archiveArtifacts('out/')
+            }
+        }
+    }
+}
