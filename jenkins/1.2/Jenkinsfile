@@ -22,7 +22,7 @@ pipeline {
         stage('Build') {
 
              environment {
-                VERSION_SUFFIX = "${powershell(script:'if ("${RC}") {echo -n "${VERSION_RC}+ci.${BUILD_NUMBER}} else {echo -n "${VERSION_RC}"}', returnStdout: true)}"
+                VERSION_SUFFIX = "${powershell(script:'if ("${RC}") {echo -n "${VERSION_RC}+ci.${BUILD_NUMBER}}" else {echo -n "${VERSION_RC}"}', returnStdout: true)}"
             }
 
             steps {
