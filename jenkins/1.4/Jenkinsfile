@@ -1,0 +1,13 @@
+library identifier: 'sample-dotnet-app@master', 
+        retriever: modernSCM([$class: 'GitSCMSource', credentialsId: '', remote: 'https://github.com/saurabhd2106/shared-library.git'])
+
+pipeline {
+    agent any 
+    stages {
+        stage('Audit Tools') {
+            steps {
+                auditTools()
+            }
+        }
+    }
+}
