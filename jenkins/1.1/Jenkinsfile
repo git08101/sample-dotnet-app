@@ -22,18 +22,18 @@ pipeline {
         }
         stage('Unit Test') {
             steps {
-              dir('./src') {
+              
                 powershell '''
                     dotnet test --logger "trx;LogFileName=Pi.Math.trx" Pi.Math.Tests/Pi.Math.Tests.csproj
                     dotnet test --logger "trx;LogFileName=Pi.Runtime.trx" Pi.Runtime.Tests/Pi.Runtime.Tests.csproj
                 '''
                 mstest testResultsFile:"**/*.trx", keepLongStdio: true
-              }
+              
             }
         }
         stage('Smoke Test') {
             steps {
-              powershell 'dotnet ./src/Pi.Web/bin/Debug/netcoreapp3.1/Pi.Web.dll'
+              powershell 'dotnet ./Pi.Web/bin/Debug/netcoreapp3.1/Pi.Web.dll'
             }
         }
     }
