@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Lki6GIBEzYiceDPceI4dc9tbWoG2jtT90ai1HS095D1BjNp+7dwer8aPPGets9VGRV4YKJ3uqaQmzPJUPJY+Zg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SAURABH\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\SAURABH\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\SAURABH\\.nuget\\packages\\powerargs\\3.6.0\\powerargs.3.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
