@@ -26,7 +26,7 @@ pipeline {
             }
 
             steps {
-              echo "Building version: ${VERSION} with suffix: ${VERSION_RC}"
+              echo "Building version: ${VERSION} with suffix: ${VERSION_SUFFIX}"
               powershell 'dotnet build -p:VersionPrefix="${VERSION}" --version-suffix "${VERSION_SUFFIX}" ./Pi.Web/Pi.Web.csproj'
             }
         }
