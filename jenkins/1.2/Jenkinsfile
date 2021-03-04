@@ -22,16 +22,16 @@ pipeline {
         stage('Build') {
 
              environment {
-              def VERSION_SUFFIX = powershell(returnStdout: true, script:'''
+              VERSION_SUFFIX = powershell(returnStdout: true, script:"""
                 
-                if ("${RC}") {
-                    write-Output "${VERSION_RC}+ci.${BUILD_NUMBER}"
+                if (\"${RC}\") {
+                    write-Output \"${VERSION_RC}+ci.${BUILD_NUMBER}\"
                     } else {
                         
-                    Write-Output "${VERSION_RC}"
+                    Write-Output \"${VERSION_RC}\"
                     
                     }
-                ''', )
+                """, )
             }
 
             steps {
