@@ -5,6 +5,10 @@ pipeline {
         }
     }
 
+    environment {
+        HOME = '/tmp'
+    }
+
     stages {
         stage('Audit tools') {                        
             steps {
