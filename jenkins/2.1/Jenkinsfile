@@ -1,0 +1,56 @@
+pipeline {
+    agent {
+        docker {
+            image 'mcr.microsoft.com/dotnet/sdk:3.1'
+        }
+    }
+
+    stages {
+        stage('Audit tools') {                        
+            steps {
+                auditTools()
+            }
+        }
+        stage('Build') {
+
+             
+            steps {
+            
+              sh 'dotnet build ./Pi.Web/Pi.Web.csproj'
+            }
+        }
+        stage('Unit Test') {
+            steps {
+              
+                sh '''
+                    dotnet test --logger "trx;LogFileName=Pi.Math.trx" Pi.Math.Tests/Pi.Math.Tests.csproj
+                    dotnet test --logger "trx;LogFileName=Pi.Runtime.trx" Pi.Runtime.Tests/Pi.Runtime.Tests.csproj
+                '''
+                mstest testResultsFile:"**/*.trx", keepLongStdio: true
+              
+            }
+        }
+        stage('Smoke Test') {
+            steps {
+              sh 'dotnet ./Pi.Web/bin/Debug/netcoreapp3.1/Pi.Web.dll'
+            }
+        }
+
+        stage('Publish') {
+            
+            steps {
+                sh 'dotnet publish Pi.Web/Pi.Web.csproj -o ./out'
+                archiveArtifacts('out/')
+            }
+        }
+    }
+}
+
+void auditTools() {
+    powershell '''
+        git version
+        docker version
+        dotnet --list-sdks
+        dotnet --list-runtimes
+    '''
+}

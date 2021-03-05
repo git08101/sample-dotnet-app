@@ -149,11 +149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Web\\Pi.Web.csproj",
+      "projectUniqueName": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Web\\Pi.Web.csproj",
       "projectName": "Pi.Web",
-      "projectPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Web\\Pi.Web.csproj",
+      "projectPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Web\\Pi.Web.csproj",
       "packagesPath": "C:\\Users\\SAURABH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Web\\obj\\",
+      "outputPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SAURABH\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -167,11 +167,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj": {
-              "projectPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj"
+            "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj": {
+              "projectPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj"
             },
-            "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj": {
-              "projectPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj"
+            "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj": {
+              "projectPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj"
             }
           }
         }

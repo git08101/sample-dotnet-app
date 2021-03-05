@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj": {}
+    "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj": {
+    "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj",
+        "projectUniqueName": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj",
         "projectName": "Pi.Runtime",
-        "projectPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj",
+        "projectPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\Pi.Runtime.csproj",
         "packagesPath": "C:\\Users\\SAURABH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\obj\\",
+        "outputPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Runtime\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAURABH\\AppData\\Roaming\\NuGet\\NuGet.Config"

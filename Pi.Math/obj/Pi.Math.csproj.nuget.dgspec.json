@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj": {}
+    "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj": {
+    "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj",
+        "projectUniqueName": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj",
         "projectName": "Pi.Math",
-        "projectPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj",
+        "projectPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj",
         "packagesPath": "C:\\Users\\SAURABH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\obj\\",
+        "outputPath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SAURABH\\AppData\\Roaming\\NuGet\\NuGet.Config"

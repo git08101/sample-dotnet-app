@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZT3YvjmrkCZBylUqYEuXCOeRtyCOhSc3aVNekdOXPISihg6bKR8ZwBlVN7T4P0O23nrGLWyjcepCluUT/TbF1Q==",
+  "dgSpecHash": "tTq6mSNUr2xpowE//FIMXw0q5XC3ezBSTKLsqOCDL151KkLxsDFOa+Bs7Fco35MYYueOV6/lgfKkA4E80GEsAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj",
+  "projectFilePath": "c:\\Users\\SAURABH\\workspace\\sample-dotnet-app\\Pi.Math\\Pi.Math.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SAURABH\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\SAURABH\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
