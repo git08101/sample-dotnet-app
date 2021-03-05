@@ -6,14 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Audit tools') {                        
-            steps {
-                auditTools()
-            }
-        }
-        stage('Build') {
-
-             
+        stage('Build') {           
             steps {
             
               sh 'dotnet build ./Pi.Web/Pi.Web.csproj'
@@ -44,13 +37,4 @@ pipeline {
             }
         }
     }
-}
-
-void auditTools() {
-    powershell '''
-        git version
-        docker version
-        dotnet --list-sdks
-        dotnet --list-runtimes
-    '''
 }
