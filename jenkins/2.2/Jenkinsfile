@@ -41,6 +41,12 @@ environment {
                 sh 'dotnet publish Pi.Web/Pi.Web.csproj -o ./out'
                 archiveArtifacts('out/')
             }
+
+            post {
+                always {
+                    jiraComment body: 'Test Comment', issueKey: 'SP-1'
+                }
+            }
         }
     }
 }
