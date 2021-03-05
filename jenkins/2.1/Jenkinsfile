@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {           
             steps {
             
-              sh 'dotnet build ./Pi.Web/Pi.Web.csproj'
+              sh 'dotnet build $WORKSPACE/Pi.Web/Pi.Web.csproj'
             }
         }
         stage('Unit Test') {
